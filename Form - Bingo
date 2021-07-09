@@ -1,0 +1,238 @@
+from ._anvil_designer import Form1Template
+from anvil import *
+from random import *
+
+class Form1(Form1Template):
+
+  def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
+    self.init_components(**properties)
+
+    # Define words to be used for bingo
+    global words
+    words = ['  CABLE  ','HOMEPAGE','  QUERY  ','   WIFI   ','   DNS   ',' SERVER ','  HTTPS  ','DOWNLOAD','  HTTP  ',' WEBSITE ','BROWSER',' ADDRESS ','  HTML  ','   URL   ','    TAG    ',' SEARCH ','    IP    ','INTERNET',' NETWORK ','APPLICATION']
+
+    # Assign words
+    self.resetBtn()
+
+  def button_1_click(self, **event_args):
+    if self.button_1.background == 'green':
+      self.button_1.background='grey'
+      self.column_panel_2.background='grey'
+    else:
+      self.button_1.background='green'
+      self.column_panel_2.background='green'
+
+  def button_2_click(self, **event_args):
+    if self.button_2.background == 'green':
+      self.button_2.background='grey'
+      self.column_panel_3.background='grey'
+    else:
+      self.button_2.background='green'
+      self.column_panel_3.background='green'
+
+  def button_3_click(self, **event_args):
+    if self.button_3.background == 'green':
+      self.button_3.background='grey'
+      self.column_panel_4.background='grey'
+    else:
+      self.button_3.background='green'
+      self.column_panel_4.background='green'
+
+  def button_4_click(self, **event_args):
+    if self.button_4.background == 'green':
+      self.button_4.background='grey'
+      self.column_panel_5.background='grey'
+    else:
+      self.button_4.background='green'
+      self.column_panel_5.background='green'
+
+  def button_5_click(self, **event_args):
+    if self.button_5.background == 'green':
+      self.button_5.background='grey'
+      self.column_panel_6.background='grey'
+    else:
+      self.button_5.background='green'
+      self.column_panel_6.background='green'
+
+  def button_6_click(self, **event_args):
+    if self.button_6.background == 'green':
+      self.button_6.background='grey'
+      self.column_panel_7.background='grey'
+    else:
+      self.button_6.background='green'
+      self.column_panel_7.background='green'
+
+  def button_7_click(self, **event_args):
+    if self.button_7.background == 'green':
+      self.button_7.background='grey'
+      self.column_panel_8.background='grey'
+    else:
+      self.button_7.background='green'
+      self.column_panel_8.background='green'
+
+  def button_8_click(self, **event_args):
+    if self.button_8.background == 'green':
+      self.button_8.background='grey'
+      self.column_panel_9.background='grey'
+    else:
+      self.button_8.background='green'
+      self.column_panel_9.background='green'
+
+  def button_9_click(self, **event_args):
+    if self.button_9.background == 'green':
+      self.button_9.background='grey'
+      self.column_panel_10.background='grey'
+    else:
+      self.button_9.background='green'
+      self.column_panel_10.background='green'
+
+  def button_10_click(self, **event_args):
+    if self.button_10.background == 'green':
+      self.button_10.background='grey'
+      self.column_panel_11.background='grey'
+    else:
+      self.button_10.background='green'
+      self.column_panel_11.background='green'
+
+  def button_11_click(self, **event_args):
+    if self.button_11.background == 'green':
+      self.button_11.background='grey'
+      self.column_panel_12.background='grey'
+    else:
+      self.button_11.background='green'
+      self.column_panel_12.background='green'
+
+  def button_12_click(self, **event_args):
+    if self.button_12.background == 'green':
+      self.button_12.background='grey'
+      self.column_panel_13.background='grey'
+    else:
+      self.button_12.background='green'
+      self.column_panel_13.background='green'
+
+  def button_13_click(self, **event_args):
+    if self.button_13.background == 'green':
+      self.button_13.background='grey'
+      self.column_panel_14.background='grey'
+    else:
+      self.button_13.background='green'
+      self.column_panel_14.background='green'
+
+  def button_14_click(self, **event_args):
+    if self.button_14.background == 'green':
+      self.button_14.background='grey'
+      self.column_panel_15.background='grey'
+    else:
+      self.button_14.background='green'
+      self.column_panel_15.background='green'
+
+  def button_15_click(self, **event_args):
+    if self.button_15.background == 'green':
+      self.button_15.background='grey'
+      self.column_panel_16.background='grey'
+    else:
+      self.button_15.background='green'
+      self.column_panel_16.background='green'
+
+  def button_16_click(self, **event_args):
+    if self.button_16.background == 'green':
+      self.button_16.background='grey'
+      self.column_panel_17.background='grey'
+    else:
+      self.button_16.background='green'
+      self.column_panel_17.background='green'
+
+  def button_17_click(self, **event_args):
+    self.resetBtn()
+    
+  def resetBtn(self):
+    # Choose random words
+    x = 0
+    toUse = ['']
+    while x <= 16:
+      num = randint(0,19)
+      while num in toUse:
+        num = randint(0,19)
+      toUse.append(num)
+      x = x + 1
+      
+    # Assign to buttons
+    # rows = ['1','2','3','4']
+    # i = 1
+    # for x in rows:
+    #  self.gp.add_component(Button(text=words[toUse[i]]),row=x,col_xs=0,width_xs=3)
+    #  i = i + 1
+    #  self.gp.add_component(Button(text=words[toUse[i]]),row=x,col_xs=3,width_xs=3)
+    #  i = i + 1
+    #  self.gp.add_component(Button(text=words[toUse[i]]),row=x,col_xs=6,width_xs=3)
+    #  i = i + 1
+    #  self.gp.add_component(Button(text=words[toUse[i]]),row=x,col_xs=9,width_xs=3)
+    #  i = i + 1
+    
+    # Assign to buttons (long way)
+    self.button_1.text=words[toUse[1]]
+    self.button_2.text=words[toUse[2]]
+    self.button_3.text=words[toUse[3]]
+    self.button_4.text=words[toUse[4]]
+    self.button_5.text=words[toUse[5]]
+    self.button_6.text=words[toUse[6]]
+    self.button_7.text=words[toUse[7]]
+    self.button_8.text=words[toUse[8]]
+    self.button_9.text=words[toUse[9]]
+    self.button_10.text=words[toUse[10]]
+    self.button_11.text=words[toUse[11]]
+    self.button_12.text=words[toUse[12]]
+    self.button_13.text=words[toUse[13]]
+    self.button_14.text=words[toUse[14]]
+    self.button_15.text=words[toUse[15]]
+    self.button_16.text=words[toUse[16]]
+    
+    # Reset colours
+    self.button_1.background='grey'
+    self.button_2.background='grey'
+    self.button_3.background='grey'
+    self.button_4.background='grey'
+    self.button_5.background='grey'
+    self.button_6.background='grey'
+    self.button_7.background='grey'
+    self.button_8.background='grey'
+    self.button_9.background='grey'
+    self.button_10.background='grey'
+    self.button_11.background='grey'
+    self.button_12.background='grey'
+    self.button_13.background='grey'
+    self.button_14.background='grey'
+    self.button_15.background='grey'
+    self.button_16.background='grey'
+    self.column_panel_2.background='grey'
+    self.column_panel_3.background='grey'
+    self.column_panel_4.background='grey'
+    self.column_panel_5.background='grey'
+    self.column_panel_6.background='grey'
+    self.column_panel_7.background='grey'
+    self.column_panel_8.background='grey'
+    self.column_panel_9.background='grey'
+    self.column_panel_10.background='grey'
+    self.column_panel_11.background='grey'
+    self.column_panel_12.background='grey'
+    self.column_panel_13.background='grey'
+    self.column_panel_14.background='grey'
+    self.column_panel_15.background='grey'
+    self.column_panel_16.background='grey'
+    self.column_panel_17.background='grey'
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
